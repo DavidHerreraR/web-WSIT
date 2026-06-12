@@ -899,6 +899,37 @@ h3 {
   max-width: 760px;
 }
 
+.headline-risk {
+  position: relative;
+  display: inline-block;
+  color: #d94d42;
+  text-shadow: 0 10px 30px rgba(217, 77, 66, 0.14);
+}
+
+.headline-risk::after {
+  content: "";
+  position: absolute;
+  left: 0.02em;
+  right: 0.02em;
+  bottom: 0.03em;
+  height: 0.18em;
+  border-radius: 999px;
+  background: rgba(217, 77, 66, 0.16);
+  z-index: -1;
+}
+
+.headline-rotator {
+  display: inline-grid;
+  min-width: 3.75em;
+  color: var(--brand-dark);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.headline-rotator.is-changing {
+  opacity: 0;
+  transform: translateY(0.18em);
+}
+
 .price-card {
   position: relative;
   overflow: hidden;

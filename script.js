@@ -10,6 +10,8 @@ const sequenceCopy = [
   "Empieza la venta.",
 ];
 
+const offerPeriods = ["día", "semana", "mes", "año"];
+
 const analytics = {
   track(eventName) {
     if (!eventName) return;
@@ -129,6 +131,24 @@ function setupHeroSequence() {
   update();
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", requestUpdate);
+}
+
+function setupOfferHeadline() {
+  const period = document.querySelector("[data-offer-period]");
+  if (!period || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let index = offerPeriods.indexOf(period.textContent.trim());
+  if (index < 0) index = 1;
+
+  window.setInterval(() => {
+    period.classList.add("is-changing");
+
+    window.setTimeout(() => {
+      index = (index + 1) % offerPeriods.length;
+      period.textContent = offerPeriods[index];
+      period.classList.remove("is-changing");
+    }, 180);
+  }, 2200);
 }
 
 function setupPortfolio() {
@@ -363,6 +383,7 @@ function setupFloatingWhatsapp() {
 setupNav();
 setupTracking();
 setupHeroSequence();
+setupOfferHeadline();
 setupPortfolio();
 setupLeadForm();
 setupFloatingWhatsapp();
