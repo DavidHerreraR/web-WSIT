@@ -4,7 +4,7 @@ const OFFER_MESSAGE =
   "Hola, quiero canjear mi c\u00f3digo de descuento *EMPEZAR10* y m\u00e1s informaci\u00f3n sobre crear mi p\u00e1gina web para mi negocio.";
 
 const sequenceCopy = [
-  "Visita tu pagina.",
+  "Visita tu página.",
   "Entiende tu oferta.",
   "Toca WhatsApp.",
   "Empieza la venta.",
@@ -89,10 +89,23 @@ function setupHeroSequence() {
 
   let ticking = false;
 
-  const update = () => {
+  const getSequenceProgress = () => {
     const rect = sequence.getBoundingClientRect();
     const scrollable = Math.max(1, rect.height - window.innerHeight);
-    const rawProgress = Math.min(1, Math.max(0, -rect.top / scrollable));
+
+    if (!window.matchMedia("(max-width: 720px)").matches) {
+      return Math.min(1, Math.max(0, -rect.top / scrollable));
+    }
+
+    const panelRect = panel.getBoundingClientRect();
+    const startLine = window.innerHeight * 0.62;
+    const endLine = window.innerHeight * 0.2;
+    const mobileProgress = (startLine - panelRect.top) / (startLine - endLine);
+    return Math.min(1, Math.max(0, mobileProgress));
+  };
+
+  const update = () => {
+    const rawProgress = getSequenceProgress();
     const frameIndex = Math.min(frames.length - 1, Math.floor(rawProgress * frames.length));
     const zoom = 1 + rawProgress * 0.13;
 
