@@ -13,9 +13,16 @@
       content="landing page, página web para negocio, vender por WhatsApp, landing page Ecuador, Work Solutions IT, página web profesional, prospectos por WhatsApp"
     />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#f7fbfa" />
+    <meta name="theme-color" content="#fafdfc" />
     <link rel="canonical" href="https://worksolutionsit.com/" />
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Una web que vende por WhatsApp" />
@@ -118,7 +125,7 @@
           <div class="container hero-grid">
             <div class="hero-copy">
               <p class="eyebrow">Landing pages para negocios</p>
-              <h1 id="hero-title">Tu web vende por WhatsApp</h1>
+              <h1 id="hero-title">Tu web <span class="serif-accent">vende</span><br />por WhatsApp</h1>
               <p class="hero-lead">
                 Tu oferta clara, profesional y lista para convertir visitas en conversaciones.
               </p>
@@ -130,9 +137,9 @@
                 <a class="btn btn-ghost" data-track="offer_click" href="#oferta">Ver oferta</a>
               </div>
               <div class="hero-price" aria-label="Precio promocional">
-                <span>Precio normal <del>$100</del></span>
-                <strong> Precio promocional: $80</strong>
-                <span>Con Código de Descuento <b>EMPEZAR10</b>: <mark>$70</mark></span>
+                <span class="chip">Normal <del>$100</del></span>
+                <span class="chip">Oferta <strong>$80</strong></span>
+                <span class="chip chip-deal">Con <b>EMPEZAR10</b> <strong>$70</strong></span>
               </div>
             </div>
 
@@ -157,57 +164,79 @@
 
       <section class="section problem" aria-labelledby="problem-title">
         <div class="container split">
-          <div>
+          <div class="reveal">
             <p class="eyebrow">El problema</p>
-            <h2 id="problem-title">Redes sociales no bastan</h2>
+            <h2 id="problem-title">Las redes sociales <span class="serif-accent">no bastan</span></h2>
           </div>
-          <div class="rich-copy">
+          <div class="rich-copy reveal">
             <p id="item-1">
               Un perfil social ayuda, pero no siempre explica tu oferta. El prospecto pregunta lo mismo, compara sin contexto y muchas veces se va.
             </p>
             <p id="item-2">
               Una landing page convierte ese desorden en un enlace claro: qué muestras, qué incluye, cuánto cuesta y cómo contactarte.
             </p>
+            <div class="chat-card problema-chat" id="card-movil-width" aria-hidden="true">
+              <div class="who">
+                <span class="dot">W</span>
+                <div><strong>Nuevo prospecto</strong><small>en línea</small></div>
+              </div>
+              <div class="bub bub-in">Hola, vi tu página.</div>
+              <div class="bub bub-out">Te ayudo ahora.</div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section light-band" id="beneficios" aria-labelledby="benefits-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <p class="eyebrow">Beneficios</p>
-            <h2 id="benefits-title">Más claridad. Más confianza. Más mensajes.</h2>
+            <h2 id="benefits-title">Más claridad. Más confianza.<br /><span class="serif-accent">Más mensajes.</span></h2>
           </div>
           <div class="benefit-grid">
-            <article class="mini-card">
-              <span>01</span>
-              <h3>Te ves profesional</h3>
-              <p>Tu negocio tiene un enlace propio, ordenado y listo para compartir.</p>
+            <article class="mini-card mini-card--big reveal">
+              <div class="mini-card-core">
+                <span class="card-glow" aria-hidden="true"></span>
+                <span class="mini-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.5" r="0.5"/><circle cx="8.5" cy="6.5" r="0.5"/></svg></span>
+                <h3>Te ves profesional</h3>
+                <p>Tu negocio tiene un enlace propio, ordenado y listo para compartir.</p>
+              </div>
             </article>
-            <article class="mini-card">
-              <span>02</span>
-              <h3>Explicas mejor</h3>
-              <p>Tu oferta, beneficios y preguntas clave quedan en un solo lugar.</p>
+            <article class="mini-card mini-card--big reveal">
+              <div class="mini-card-core">
+                <span class="card-glow" aria-hidden="true"></span>
+                <span class="mini-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.2L4 21l1.8-5.4A8 8 0 1 1 21 12Z"/><path d="M9 11h6"/><path d="M9 14h3"/></svg></span>
+                <h3>WhatsApp directo</h3>
+                <p>Los botones abren conversaciones con mensajes preparados.</p>
+              </div>
             </article>
-            <article class="mini-card">
-              <span>03</span>
-              <h3>WhatsApp directo</h3>
-              <p>Los botones abren conversaciones con mensajes preparados.</p>
+            <article class="mini-card reveal">
+              <div class="mini-card-core">
+                <span class="mini-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 15l5-5 4 4 7-7"/><path d="M16 7h4v4"/></svg></span>
+                <h3>Explicas mejor</h3>
+                <p>Tu oferta, beneficios y preguntas clave quedan en un solo lugar.</p>
+              </div>
             </article>
-            <article class="mini-card">
-              <span>04</span>
-              <h3>Menos repetición</h3>
-              <p>El cliente llega con contexto y tu respuesta puede ser más rápida.</p>
+            <article class="mini-card reveal">
+              <div class="mini-card-core">
+                <span class="mini-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <h3>Menos repetición</h3>
+                <p>El cliente llega con contexto y tu respuesta puede ser más rápida.</p>
+              </div>
             </article>
-            <article class="mini-card">
-              <span>05</span>
-              <h3>Mejores anuncios</h3>
-              <p>Envías el tráfico a una página pensada para convertir.</p>
+            <article class="mini-card reveal">
+              <div class="mini-card-core">
+                <span class="mini-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3 4 14h6l-1 7 9-11h-6l1-7Z"/></svg></span>
+                <h3>Mejores anuncios</h3>
+                <p>Envías el tráfico a una página pensada para convertir.</p>
+              </div>
             </article>
-            <article class="mini-card">
-              <span>06</span>
-              <h3>Disponible 24/7</h3>
-              <p>Tu página trabaja aunque no estés respondiendo en ese momento.</p>
+            <article class="mini-card reveal">
+              <div class="mini-card-core">
+                <span class="mini-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></span>
+                <h3>Disponible 24/7</h3>
+                <p>Tu página trabaja aunque no estés respondiendo en ese momento.</p>
+              </div>
             </article>
           </div>
         </div>
@@ -215,49 +244,14 @@
 
       <section class="section includes" id="incluye" aria-labelledby="includes-title">
         <div class="container includes-grid">
-          <div class="hero-visual includes-visual reveal is-visible" aria-label="Vista visual de landing page y WhatsApp">
-            <div class="desktop-mockup">
-              <div class="mockup-top">
-                <span></span><span></span><span></span>
-                <em>tumarca.com</em>
-              </div>
-              <div class="mockup-body">
-                <div class="mockup-nav"></div>
-                <div class="mockup-title"></div>
-                <div class="mockup-text"></div>
-                <div class="mockup-button"></div>
-                <div class="mockup-card card-a"></div>
-                <div class="mockup-card card-b"></div>
-                <div class="mockup-card card-c"></div>
-              </div>
-            </div>
-            <div class="phone-mockup">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="chat-head">
-                  <span class="chat-avatar">W</span>
-                  <div>
-                    <strong>Nuevo prospecto</strong>
-                    <small>en línea</small>
-                  </div>
-                </div>
-                <div class="bubble incoming">Hola, vi tu página.</div>
-                <div class="bubble outgoing">Te ayudo ahora.</div>
-                <div class="sale-chip">Listo para conversar</div>
-              </div>
-            </div>
-            <div class="flow-card flow-one">Web</div>
-            <div class="flow-card flow-two">Confianza</div>
-            <div class="flow-card flow-three">WhatsApp</div>
-          </div>
-
-          <div class="includes-content">
+          <div class="includes-content reveal">
             <p class="eyebrow">Incluido</p>
-            <h2 id="includes-title">Todo listo para publicar</h2>
+            <h2 id="includes-title">Todo listo <span class="serif-accent">para publicar</span></h2>
             <p>
-              Sin hablarte de herramientas ni detalles técnicos: te entregamos la página funcionando. 
+              Sin hablarte de herramientas ni detalles técnicos: te entregamos la página funcionando.
             </p>
-            <div class="include-list">
+          </div>
+          <div class="include-list reveal">
               <span class="include-item">
                 <span class="include-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg></span>
                 <span>Diseño</span>
@@ -282,14 +276,13 @@
                 <span class="include-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 14c-1.5 1.2-2 3-2 5 2 0 3.8-.5 5-2" /><path d="M15 9l-6 6" /><path d="M14 4c2 0 4.5.5 6 2-1.5 1.5-2 4-2 6l-6 6-6-6Z" /><path d="M15 9h.01" /></svg></span>
                 <span>Publicación</span>
               </span>
-            </div>
           </div>
         </div>
       </section>
 
       <section class="section offer" id="oferta" aria-labelledby="offer-title">
         <div class="container offer-grid">
-          <div class="offer-copy">
+          <div class="offer-copy reveal">
             <p class="eyebrow">Oferta activa</p>
             <h2 id="offer-title">
               Estrena una web profesional por menos de lo que cuesta
@@ -300,30 +293,28 @@
               Una inversión pequeña para que tu negocio tenga una presencia clara, compartible y lista para recibir prospectos. Precio normal <del>$100</del>. Oferta $80. Con el código <b>EMPEZAR10</b> recibes $10 adicionales de descuento.
             </p>
           </div>
-          <aside class="price-card" aria-label="Oferta landing page">
-            <div class="price-card-head">
-              <span class="price-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /><path d="M5 6v12" /></svg></span>
+          <aside class="price-card reveal" aria-label="Oferta landing page">
+            <div class="price-card-core">
+            <div class="price-head">
               <div>
                 <span class="price-label">Landing page completa</span>
                 <p>Lista para publicar, compartir y recibir mensajes.</p>
               </div>
+              <span class="badge-live">Oferta activa</span>
             </div>
             <div class="price-main">
-              <span>Oferta activa</span>
-              <div>
-                <del>$100</del>
-                <strong>$80</strong>
+              <div class="price-final">
+                <span class="cur">$</span><span class="num">70</span>
+                <small>pago único<br />con código</small>
+              </div>
+              <div class="price-ladder">
+                <span><i>Precio normal</i><del>$100</del></span>
+                <span><i>Precio oferta</i><b>$80</b></span>
               </div>
             </div>
-            <div class="deal-row">
-              <div class="coupon">
-                <span>Código</span>
-                <b>EMPEZAR10</b>
-              </div>
-              <div class="price-final">
-                <span>Pagas con descuento</span>
-                <strong>$70</strong>
-              </div>
+            <div class="coupon">
+              <span class="code"><span>Código de descuento</span><b>EMPEZAR10</b></span>
+              <span class="drop">−$10 adicionales<small>$80 → $70</small></span>
             </div>
             <ul class="price-includes" aria-label="Incluye">
               <li>Diseño y desarrollo</li>
@@ -334,32 +325,69 @@
               <span class="wa-icon" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16.04 3.2c-7.06 0-12.8 5.63-12.8 12.56 0 2.22.6 4.38 1.73 6.28L3.2 28.8l6.96-1.76a13 13 0 0 0 5.88 1.43c7.06 0 12.8-5.63 12.8-12.56S23.1 3.2 16.04 3.2Zm0 22.96c-1.82 0-3.6-.47-5.16-1.37l-.37-.22-4.13 1.05 1.1-4-.25-.4a10.15 10.15 0 0 1-1.57-5.46c0-5.65 4.65-10.25 10.38-10.25s10.38 4.6 10.38 10.25-4.65 10.4-10.38 10.4Zm5.68-7.66c-.31-.15-1.84-.9-2.12-1-.28-.11-.49-.15-.7.15-.2.3-.8 1-.98 1.2-.18.2-.36.22-.67.07-.31-.15-1.31-.48-2.5-1.53a9.38 9.38 0 0 1-1.73-2.12c-.18-.3-.02-.46.14-.62.14-.14.31-.36.47-.54.15-.18.2-.3.31-.5.1-.2.05-.38-.03-.53-.08-.15-.7-1.66-.95-2.27-.25-.6-.5-.5-.7-.52h-.6c-.2 0-.53.08-.8.38-.28.3-1.05 1-1.05 2.43s1.08 2.83 1.23 3.02c.15.2 2.13 3.18 5.16 4.45.72.31 1.29.5 1.73.63.73.23 1.39.2 1.91.12.58-.09 1.84-.73 2.1-1.44.26-.7.26-1.31.18-1.44-.08-.13-.28-.2-.6-.35Z" /></svg></span>
               Canjear descuento
             </a>
+            </div>
           </aside>
         </div>
       </section>
 
       <section class="section process" aria-labelledby="process-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <p class="eyebrow">Proceso</p>
-            <h2 id="process-title">De idea a página publicada sin complicarte</h2>
+            <h2 id="process-title">De idea a página publicada<br /><span class="serif-accent">sin complicarte</span></h2>
           </div>
           <ol class="process-list">
-            <li>
-              <span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 6h13" /><path d="M8 12h13" /><path d="M8 18h13" /><path d="M3 6h.01" /><path d="M3 12h.01" /><path d="M3 18h.01" /></svg></span>
-              <p><span class="step-number">1</span> Envías datos de tu negocio.</p>
+            <li class="reveal">
+              <div class="step-visual">
+                <span class="step-num">01</span>
+                <div class="sv-doc" aria-hidden="true">
+                  <span class="sq"></span>
+                  <i style="width:78%"></i>
+                  <i style="width:55%"></i>
+                  <i style="width:66%"></i>
+                </div>
+                <span class="sv-badge"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7" /></svg>Recibido</span>
+              </div>
+              <h3>Envías tus datos</h3>
+              <p>Logo, fotos, servicios y lo esencial de tu negocio.</p>
             </li>
-            <li>
-              <span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg></span>
-              <p><span class="step-number">2</span> Armamos la propuesta visual.</p>
+            <li class="reveal">
+              <div class="step-visual">
+                <span class="step-num">02</span>
+                <div class="sv-browser" aria-hidden="true">
+                  <div class="bar"><i></i><i></i><i></i></div>
+                  <div class="body">
+                    <div class="h"></div>
+                    <div class="cols"><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+                <div class="sv-swatches" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i></div>
+              </div>
+              <h3>Armamos la propuesta</h3>
+              <p>Diseño visual pensado para tu oferta concreta.</p>
             </li>
-            <li>
-              <span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15v6" /><path d="M8 17h8" /><path d="M4 4h16v10H4z" /><path d="m9 9 2 2 4-4" /></svg></span>
-              <p><span class="step-number">3</span> Configuramos y publicamos.</p>
+            <li class="reveal">
+              <div class="step-visual">
+                <span class="step-num">03</span>
+                <div class="sv-url" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+                  tumarca.com
+                </div>
+                <span class="sv-badge"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7" /></svg>Publicado</span>
+              </div>
+              <h3>Configuramos y publicamos</h3>
+              <p>Dominio, hosting y botones de WhatsApp funcionando.</p>
             </li>
-            <li>
-              <span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" /><path d="m9 11 2 2 4-4" /></svg></span>
-              <p><span class="step-number">4</span> Empiezas a recibir mensajes.</p>
+            <li class="reveal">
+              <div class="step-visual">
+                <span class="step-num">04</span>
+                <div class="sv-chat" aria-hidden="true">
+                  <span class="bub bub-in">Hola, vi tu página</span>
+                  <span class="bub bub-out">Te ayudo ahora</span>
+                </div>
+              </div>
+              <h3>Recibes mensajes</h3>
+              <p>Tu enlace queda listo para compartir y anunciar.</p>
             </li>
           </ol>
         </div>
@@ -369,9 +397,9 @@
         <div class="container">
           <div class="portfolio-shell">
             <div class="portfolio-top">
-              <div class="section-head">
+              <div class="section-head reveal">
                 <p class="eyebrow">Portafolio</p>
-                <h2 id="portfolio-title">Sitios creados para vender</h2>
+                <h2 id="portfolio-title">Sitios creados <span class="serif-accent">para vender</span></h2>
                 <p class="section-kicker">Proyectos para servicios, tiendas, restaurantes y marcas que necesitan convertir visitas en mensajes.</p>
               </div>
               <div class="portfolio-controls" aria-label="Controles del carrusel">
@@ -431,9 +459,9 @@
 
       <section class="section proof" aria-labelledby="proof-title">
         <div class="container proof-grid">
-          <div class="proof-copy">
+          <div class="proof-copy reveal">
             <p class="eyebrow">Prueba social</p>
-            <h2 id="proof-title">Vende con menos fricción</h2>
+            <h2 id="proof-title">Vende con <span class="serif-accent">menos fricción</span></h2>
             <p>
               Una página clara reduce preguntas repetidas y ayuda a que el cliente escriba con una idea más concreta.
             </p>
@@ -443,10 +471,9 @@
               <span><strong>Listo para anuncios</strong><small>Un enlace fácil de compartir.</small></span>
             </div>
           </div>
-          <div class="proof-panel">
+          <div class="proof-panel reveal">
             <div class="proof-panel-head">
               <span class="proof-badge">Resultado esperado</span>
-              <span class="proof-rating">5/5 claridad</span>
             </div>
             <div class="quote-grid">
               <figure class="quote-feature">
@@ -455,11 +482,17 @@
               </figure>
               <figure>
                 <blockquote>"Ahora enviamos un solo enlace y evitamos explicar lo mismo."</blockquote>
-                <figcaption><span>Emprendimiento local</span><small>Proceso de venta más simple</small></figcaption>
+                <figcaption>
+                  <span class="quote-who"><span>Emprendimiento local</span><small>Proceso de venta más simple</small></span>
+                  <span class="quote-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9 5.5 4h13L20 9" /><path d="M4 9h16" /><path d="M5 9v11h14V9" /><path d="M9.5 20v-5h5v5" /></svg></span>
+                </figcaption>
               </figure>
               <figure>
                 <blockquote>"La página se ve profesional y ayuda a ordenar lo que ofrecemos."</blockquote>
-                <figcaption><span>Marca en crecimiento</span><small>Presencia digital más confiable</small></figcaption>
+                <figcaption>
+                  <span class="quote-who"><span>Marca en crecimiento</span><small>Presencia digital más confiable</small></span>
+                  <span class="quote-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9 5.5 4h13L20 9" /><path d="M4 9h16" /><path d="M5 9v11h14V9" /><path d="M9.5 20v-5h5v5" /></svg></span>
+                </figcaption>
               </figure>
             </div>
           </div>
@@ -468,14 +501,14 @@
 
       <section class="section contact" id="contacto" aria-labelledby="contact-title">
         <div class="container contact-grid">
-          <div>
-            <p class="eyebrow"><b>Contacto</b></p>
-            <h2 id="contact-title">Compártenos tu idea, cuéntanos qué vendes y la hacemos realidad.</h2>
+          <div class="reveal">
+            <p class="eyebrow">Contacto</p>
+            <h2 id="contact-title">Compártenos tu idea, cuéntanos qué vendes y <span class="serif-accent">la hacemos realidad</span>.</h2>
             <p>
               No pierdas más tiempo, dinero y clientes. Puedes escribir directo o completar este formulario. Al enviarlo, se abre WhatsApp con el mensaje listo. Aprovecha el código de descuento <b>EMPEZAR10</b> y recibes $10 adicionales de descuento.
             </p>
           </div>
-          <form class="contact-form" id="lead-form">
+          <form class="contact-form reveal" id="lead-form">
             <label>
               Nombre
               <input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required />
@@ -503,7 +536,7 @@
               <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" /><path d="M9 9h6" /><path d="M9 13h4" /></svg>
             </span>
             <p class="eyebrow">FAQ</p>
-            <h2 id="faq-title">Resolvemos tus dudas</h2>
+            <h2 id="faq-title">Resolvemos <span class="serif-accent">tus dudas</span></h2>
             <p class="section-kicker">Lo esencial antes de empezar tu landing page y activar el contacto por WhatsApp.</p>
           </div>
           <div class="faq-helper" aria-hidden="true">
@@ -541,9 +574,17 @@
       </section>
 
       <section class="section final-cta" aria-labelledby="final-title">
-        <div class="container final-box">
+        <div class="container final-box reveal">
           <p class="eyebrow">Listo para empezar</p>
-          <h2 id="final-title">Convierte tu próximo clic en una conversación</h2>
+          <h2 id="final-title">Convierte tu próximo clic en una <span class="serif-accent">conversación</span></h2>
+          <div class="chat-card final-chat" aria-hidden="true">
+            <div class="who">
+              <span class="dot">W</span>
+              <div><strong>Nuevo prospecto</strong><small>en línea</small></div>
+            </div>
+            <div class="bub bub-in">Hola, vi tu página.</div>
+            <div class="bub bub-out">Te ayudo ahora.</div>
+          </div>
           <a class="btn btn-primary" data-track="whatsapp_click" href="https://wa.me/593969069585?text=Hola%2C%20quiero%20canjear%20mi%20c%C3%B3digo%20de%20descuento%20%2AEMPEZAR10%2A%20y%20m%C3%A1s%20informaci%C3%B3n%20sobre%20crear%20mi%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">
             <span class="wa-icon" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16.04 3.2c-7.06 0-12.8 5.63-12.8 12.56 0 2.22.6 4.38 1.73 6.28L3.2 28.8l6.96-1.76a13 13 0 0 0 5.88 1.43c7.06 0 12.8-5.63 12.8-12.56S23.1 3.2 16.04 3.2Zm0 22.96c-1.82 0-3.6-.47-5.16-1.37l-.37-.22-4.13 1.05 1.1-4-.25-.4a10.15 10.15 0 0 1-1.57-5.46c0-5.65 4.65-10.25 10.38-10.25s10.38 4.6 10.38 10.25-4.65 10.4-10.38 10.4Zm5.68-7.66c-.31-.15-1.84-.9-2.12-1-.28-.11-.49-.15-.7.15-.2.3-.8 1-.98 1.2-.18.2-.36.22-.67.07-.31-.15-1.31-.48-2.5-1.53a9.38 9.38 0 0 1-1.73-2.12c-.18-.3-.02-.46.14-.62.14-.14.31-.36.47-.54.15-.18.2-.3.31-.5.1-.2.05-.38-.03-.53-.08-.15-.7-1.66-.95-2.27-.25-.6-.5-.5-.7-.52h-.6c-.2 0-.53.08-.8.38-.28.3-1.05 1-1.05 2.43s1.08 2.83 1.23 3.02c.15.2 2.13 3.18 5.16 4.45.72.31 1.29.5 1.73.63.73.23 1.39.2 1.91.12.58-.09 1.84-.73 2.1-1.44.26-.7.26-1.31.18-1.44-.08-.13-.28-.2-.6-.35Z" /></svg></span>
             Quiero mi landing
@@ -568,13 +609,13 @@
         </div>
         <div class="footer-contact">
           <h2>Contacto</h2>
-          <a class="footer-cta" data-track="whatsapp_click" href="https://wa.me/593969069585?text=Hola%2C%20tengo%20una%20consulta." target="_blank" rel="noopener noreferrer">
+          <div class="footer-actions">
+          <a class="btn btn-primary" data-track="whatsapp_click" href="https://wa.me/593969069585?text=Hola%2C%20tengo%20una%20consulta." target="_blank" rel="noopener noreferrer">
             <span class="wa-icon" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16.04 3.2c-7.06 0-12.8 5.63-12.8 12.56 0 2.22.6 4.38 1.73 6.28L3.2 28.8l6.96-1.76a13 13 0 0 0 5.88 1.43c7.06 0 12.8-5.63 12.8-12.56S23.1 3.2 16.04 3.2Zm0 22.96c-1.82 0-3.6-.47-5.16-1.37l-.37-.22-4.13 1.05 1.1-4-.25-.4a10.15 10.15 0 0 1-1.57-5.46c0-5.65 4.65-10.25 10.38-10.25s10.38 4.6 10.38 10.25-4.65 10.4-10.38 10.4Zm5.68-7.66c-.31-.15-1.84-.9-2.12-1-.28-.11-.49-.15-.7.15-.2.3-.8 1-.98 1.2-.18.2-.36.22-.67.07-.31-.15-1.31-.48-2.5-1.53a9.38 9.38 0 0 1-1.73-2.12c-.18-.3-.02-.46.14-.62.14-.14.31-.36.47-.54.15-.18.2-.3.31-.5.1-.2.05-.38-.03-.53-.08-.15-.7-1.66-.95-2.27-.25-.6-.5-.5-.7-.52h-.6c-.2 0-.53.08-.8.38-.28.3-1.05 1-1.05 2.43s1.08 2.83 1.23 3.02c.15.2 2.13 3.18 5.16 4.45.72.31 1.29.5 1.73.63.73.23 1.39.2 1.91.12.58-.09 1.84-.73 2.1-1.44.26-.7.26-1.31.18-1.44-.08-.13-.28-.2-.6-.35Z" /></svg></span>
             Contactar por WhatsApp
           </a>
-          <div class="footer-social">
-            <a data-track="instagram_click" href="https://www.instagram.com/worksolutions_it" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a data-track="facebook_click" href="https://www.facebook.com/share/1D2MDDvRgo/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="btn btn-ghost" data-track="instagram_click" href="https://www.instagram.com/worksolutions_it" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-ghost" data-track="facebook_click" href="https://www.facebook.com/share/1D2MDDvRgo/" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
       </div>
