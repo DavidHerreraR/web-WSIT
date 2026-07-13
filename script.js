@@ -3,13 +3,6 @@ const GENERAL_MESSAGE = "Hola, tengo una consulta.";
 const OFFER_MESSAGE =
   "Hola, quiero canjear mi c\u00f3digo de descuento *EMPEZAR10* y m\u00e1s informaci\u00f3n sobre crear mi p\u00e1gina web para mi negocio.";
 
-const sequenceCopy = [
-  "Visita tu página.",
-  "Entiende tu oferta.",
-  "Toca WhatsApp.",
-  "Empieza la venta.",
-];
-
 const offerPeriods = ["día", "semana", "mes", "año"];
 
 const analytics = {
@@ -79,58 +72,76 @@ function setupTracking() {
   });
 }
 
-function setupHeroSequence() {
-  const sequence = document.querySelector("[data-hero-sequence]");
-  const frames = [...document.querySelectorAll(".sequence-frame")];
-  const step = document.querySelector("[data-sequence-step]");
-  const copy = document.querySelector("[data-sequence-copy]");
-  const progress = document.querySelector("[data-sequence-progress]");
-  const panel = document.querySelector(".sequence-panel");
+function setupHeroVideos() {
+  const videos = [...document.querySelectorAll(".hero-video")];
+  const bars = [...document.querySelectorAll(".story-bar")];
 
-  if (!sequence || !frames.length || !step || !copy || !progress || !panel) return;
+  if (!videos.length || !bars.length) return;
 
-  let ticking = false;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const getSequenceProgress = () => {
-    const rect = sequence.getBoundingClientRect();
-    const scrollable = Math.max(1, rect.height - window.innerHeight);
+  let activeIndex = 0;
+  let rafId = 0;
 
-    if (!window.matchMedia("(max-width: 720px)").matches) {
-      return Math.min(1, Math.max(0, -rect.top / scrollable));
-    }
-
-    const panelRect = panel.getBoundingClientRect();
-    const startLine = window.innerHeight * 0.62;
-    const endLine = window.innerHeight * 0.2;
-    const mobileProgress = (startLine - panelRect.top) / (startLine - endLine);
-    return Math.min(1, Math.max(0, mobileProgress));
+  const setBars = () => {
+    bars.forEach((bar, index) => {
+      const fill = bar.firstElementChild;
+      if (!fill) return;
+      if (index < activeIndex) fill.style.width = "100%";
+      else if (index > activeIndex) fill.style.width = "0%";
+      else fill.style.width = prefersReducedMotion ? "100%" : "0%";
+    });
   };
 
-  const update = () => {
-    const rawProgress = getSequenceProgress();
-    const frameIndex = Math.min(frames.length - 1, Math.floor(rawProgress * frames.length));
-    const zoom = 1 + rawProgress * 0.13;
+  const updateActiveBarFill = () => {
+    const active = videos[activeIndex];
+    const fill = bars[activeIndex] && bars[activeIndex].firstElementChild;
+    if (fill && active.duration) {
+      fill.style.width = ((active.currentTime / active.duration) * 100).toFixed(1) + "%";
+    }
+    rafId = window.requestAnimationFrame(updateActiveBarFill);
+  };
 
-    frames.forEach((frame, index) => {
-      frame.classList.toggle("is-active", index === frameIndex);
+  const playStory = (index) => {
+    if (rafId) window.cancelAnimationFrame(rafId);
+    activeIndex = ((index % videos.length) + videos.length) % videos.length;
+
+    videos.forEach((video, i) => {
+      const isActive = i === activeIndex;
+      video.classList.toggle("is-active", isActive);
+      if (isActive) {
+        video.currentTime = 0;
+        if (!prefersReducedMotion) video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
     });
 
-    panel.style.setProperty("--frame-zoom", zoom.toFixed(3));
-    panel.style.setProperty("--sequence-progress", rawProgress.toFixed(3));
-    step.textContent = String(frameIndex + 1).padStart(2, "0");
-    copy.textContent = sequenceCopy[frameIndex] || sequenceCopy[0];
-    ticking = false;
+    setBars();
+    if (!prefersReducedMotion) rafId = window.requestAnimationFrame(updateActiveBarFill);
   };
 
-  const requestUpdate = () => {
-    if (ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(update);
-  };
+  videos.forEach((video, index) => {
+    video.muted = true;
+    video.addEventListener("ended", () => {
+      if (index === activeIndex) playStory(activeIndex + 1);
+    });
+  });
 
-  update();
-  window.addEventListener("scroll", requestUpdate, { passive: true });
-  window.addEventListener("resize", requestUpdate);
+  bars.forEach((bar, index) => {
+    bar.addEventListener("click", () => playStory(index));
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    const active = videos[activeIndex];
+    if (document.hidden) {
+      active.pause();
+    } else if (!prefersReducedMotion) {
+      active.play().catch(() => {});
+    }
+  });
+
+  playStory(0);
 }
 
 function setupOfferHeadline() {
@@ -407,7 +418,7 @@ function setupReveals() {
 
 setupNav();
 setupTracking();
-setupHeroSequence();
+setupHeroVideos();
 setupOfferHeadline();
 setupPortfolio();
 setupLeadForm();

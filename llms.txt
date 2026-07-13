@@ -1,0 +1,23 @@
+# Work Solutions IT
+
+> Work Solutions IT crea landing pages para negocios que quieren verse profesionales, explicar mejor su oferta y recibir prospectos por WhatsApp. Servicio online, atención para Ecuador y el exterior.
+
+## Oferta
+- Landing page completa: diseño, desarrollo, servidor/hosting, dominio, configuración y publicación.
+- Precio normal: $100. Precio de oferta: $80. Con el código de descuento EMPEZAR10: $70.
+- Contacto y cotización por WhatsApp: https://wa.me/593969069585
+
+## Preguntas frecuentes
+- ¿Qué incluye el servicio? Diseño, desarrollo, servidor/hosting, dominio, configuración y publicación web.
+- ¿Cómo funciona el descuento EMPEZAR10? Se aplica por WhatsApp y baja el precio de $80 a $70.
+- ¿La página conecta con WhatsApp? Sí, los botones y el formulario abren WhatsApp con mensajes listos.
+- ¿Se puede usar para anuncios? Sí, la estructura admite Meta Pixel, Google Tag y Google Ads.
+- ¿Incluye soporte después de publicar? Configuración inicial y revisión básica incluidas; mantenimiento continuo es un servicio adicional.
+
+## Páginas
+- Sitio principal: https://wsit.netlify.app/
+
+## Contacto
+- WhatsApp: +593 96 906 9585
+- Instagram: https://www.instagram.com/worksolutions_it
+- Facebook: https://www.facebook.com/share/1D2MDDvRgo/

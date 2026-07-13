@@ -39,7 +39,7 @@
     <!-- Verificación de dominio: pegar aquí meta tags de Google Search Console, Meta Business u otros servicios -->
     <!-- FIN MARKETING / ANALÍTICA -->
 
-    <link rel="preload" href="assets/hero-sequence-01.jpg" as="image" />
+    <link rel="preload" href="assets/hero-ideas/idea-1-viaje-del-cliente/Imagenes optimizadas/chatgpt-image-8-jul-2026-15-29-53-severa.webp" as="image" />
     <link rel="stylesheet" href="styles.css" />
 
     <script type="application/ld+json">
@@ -120,8 +120,19 @@
     </header>
 
     <main>
-      <section class="hero-cinema" id="inicio" data-hero-sequence aria-labelledby="hero-title">
+      <section class="hero-cinema" id="inicio" data-hero-videos aria-labelledby="hero-title">
         <div class="hero-sticky">
+          <div class="hero-backdrop" aria-label="Video de landing conectada a WhatsApp">
+            <video class="hero-video is-active" src="assets/Idea 1 (optimizado).mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+            <video class="hero-video" src="assets/Idea 2 (optimizado).mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+            <video class="hero-video" src="assets/Idea 3 (optimizado).mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="story-bars" aria-label="Cambiar de historia">
+              <button class="story-bar" type="button" aria-label="Ver historia 1"><span></span></button>
+              <button class="story-bar" type="button" aria-label="Ver historia 2"><span></span></button>
+              <button class="story-bar" type="button" aria-label="Ver historia 3"><span></span></button>
+            </div>
+          </div>
           <div class="container hero-grid">
             <div class="hero-copy">
               <p class="eyebrow">Landing pages para negocios</p>
@@ -137,27 +148,12 @@
                 <a class="btn btn-ghost" data-track="offer_click" href="#oferta">Ver oferta</a>
               </div>
               <div class="hero-price" aria-label="Precio promocional">
-                <span class="chip">Normal <del>$100</del></span>
-                <span class="chip">Oferta <strong>$80</strong></span>
-                <span class="chip chip-deal">Con <b>EMPEZAR10</b> <strong>$70</strong></span>
+                <span class="chip">Precio Normal <del>$100</del></span>
+                <span class="chip">Precio Oferta <strong>$80</strong></span>
+                <span class="chip chip-deal">Código de descuento <b>EMPEZAR10</b> -$10 <strong>$70</strong></span>
               </div>
             </div>
 
-            <div class="sequence-panel" aria-label="Secuencia visual de landing a WhatsApp">
-              <div class="sequence-media">
-                <img class="sequence-frame is-active" src="assets/hero-sequence-01.jpg" alt="Landing page profesional conectada a chat móvil" />
-                <img class="sequence-frame" src="assets/hero-sequence-02.jpg" alt="Vista cercana de una landing page moderna" />
-                <img class="sequence-frame" src="assets/hero-sequence-03.jpg" alt="Conversación móvil iniciada desde una página web" />
-                <img class="sequence-frame" src="assets/hero-sequence-04.jpg" alt="Prospecto convertido en oportunidad de venta" />
-              </div>
-              <div class="sequence-caption">
-                <span data-sequence-step>01</span>
-                <p data-sequence-copy>Visita tu página.</p>
-              </div>
-              <div class="sequence-progress" aria-hidden="true">
-                <span data-sequence-progress></span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -450,7 +446,22 @@
                   <span class="portfolio-media"><img src="assets/portfolio-web-psicologia-preview.jpg" alt="Vista previa de sitio web de psicología" loading="lazy" /></span>
                   <span class="portfolio-meta"><span>Profesional</span><strong>WEB Psicología</strong><small>Contenido completo para generar confianza.</small></span>
                 </button>
-                
+                <button class="portfolio-card" type="button" data-title="Centro médico" data-full="assets/centromedico-completo.webp" aria-label="Abrir proyecto Centro médico">
+                  <span class="portfolio-media"><img src="assets/centromedico.webp" alt="Vista previa de sitio para centro médico" loading="lazy" /></span>
+                  <span class="portfolio-meta"><span>Salud</span><strong>Centro médico</strong><small>Medicina, odontología y ecografía en un solo lugar.</small></span>
+                </button>
+                <button class="portfolio-card" type="button" data-title="Clínica dental" data-full="assets/clinicadental-completo.webp" aria-label="Abrir proyecto Clínica dental">
+                  <span class="portfolio-media"><img src="assets/clinicadental.webp" alt="Vista previa de sitio para clínica dental" loading="lazy" /></span>
+                  <span class="portfolio-meta"><span>Odontología</span><strong>Clínica dental</strong><small>Citas por WhatsApp para una clínica de confianza.</small></span>
+                </button>
+                <button class="portfolio-card" type="button" data-title="Óptica boutique" data-full="assets/optica1-completo.webp" aria-label="Abrir proyecto Óptica boutique">
+                  <span class="portfolio-media"><img src="assets/optica1.webp" alt="Vista previa de sitio para óptica boutique" loading="lazy" /></span>
+                  <span class="portfolio-meta"><span>Visión</span><strong>Óptica boutique</strong><small>Examen visual y armazones con cifras que generan confianza.</small></span>
+                </button>
+                <button class="portfolio-card" type="button" data-title="Óptica editorial" data-full="assets/optica2-completo.webp" aria-label="Abrir proyecto Óptica editorial">
+                  <span class="portfolio-media"><img src="assets/optica2.webp" alt="Vista previa de sitio para óptica editorial" loading="lazy" /></span>
+                  <span class="portfolio-meta"><span>Moda</span><strong>Óptica editorial</strong><small>Marca editorial para una óptica con identidad propia.</small></span>
+                </button>
               </div>
             </div>
           </div>
@@ -596,7 +607,9 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo-menu-glass.webp" alt="Work Solutions IT" />
+          <div class="footer-logo-card">
+            <img src="assets/logo-menu-glass.webp" alt="Work Solutions IT" />
+          </div>
           <p>Soluciones digitales para negocios que quieren comunicar mejor, mejorar su presencia en internet y recibir más oportunidades.</p>
         </div>
         <div class="footer-info">
