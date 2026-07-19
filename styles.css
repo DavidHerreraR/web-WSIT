@@ -711,6 +711,279 @@ p {
   font-weight: 600;
 }
 
+/* cluster decorativo de redes sociales — visible en escritorio y móvil */
+.problem-head {
+  position: relative;
+}
+
+/* MÓVIL (base): ocupa el espacio libre a la derecha del titular */
+.social-cluster {
+  position: absolute;
+  right: 0;
+  top: -12px;
+  width: 178px;
+  height: 145px;
+  pointer-events: none;
+}
+
+/* apariencia compartida (móvil y escritorio) */
+.sc-chip {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 10px 26px rgba(8, 60, 62, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  animation: sc-float 6s var(--ease) infinite;
+}
+
+.sc-chip svg {
+  width: 46%;
+  height: 46%;
+  fill: #ffffff;
+}
+
+.sc-ig {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  animation-delay: -0.4s;
+}
+
+.sc-fb {
+  background: #1877f2;
+  animation-delay: -2.6s;
+}
+
+.sc-tt {
+  background: #010101;
+  animation-delay: -1.5s;
+}
+
+/* tamaños + posiciones MÓVIL */
+.sc-ig {
+  width: 34px;
+  height: 34px;
+  top: 4%;
+  left: 30%;
+}
+
+.sc-fb {
+  width: 32px;
+  height: 32px;
+  top: 8%;
+  left: 66%;
+}
+
+.sc-tt {
+  width: 28px;
+  height: 28px;
+  top: 40%;
+  left: 20%;
+}
+
+.sc-bubble {
+  position: absolute;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--bg1);
+  border: 1px solid var(--line);
+  padding: 5px 9px;
+  border-radius: 12px;
+  border-bottom-left-radius: 4px;
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  animation: sc-float 6.5s var(--ease) infinite;
+}
+
+.sc-b1 {
+  top: 42%;
+  left: 54%;
+  animation-delay: -3.4s;
+}
+
+.sc-b2 {
+  display: none;
+}
+
+.sc-typing {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  top: 84%;
+  left: 60%;
+  padding: 7px 9px;
+  animation-delay: -5s;
+}
+
+.sc-typing i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--faint);
+  animation: sc-blink 1.4s ease-in-out infinite;
+}
+
+.sc-typing i:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.sc-typing i:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.sc-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(14, 131, 124, 0.4);
+  animation: sc-float 5.5s var(--ease) infinite;
+}
+
+.sc-d1 {
+  top: 20%;
+  left: 46%;
+  animation-delay: -1.2s;
+}
+
+.sc-d2 {
+  top: 54%;
+  left: 42%;
+  width: 5px;
+  height: 5px;
+  animation-delay: -3s;
+}
+
+.sc-d3 {
+  top: 60%;
+  left: 80%;
+  animation-delay: -0.6s;
+}
+
+.sc-d4 {
+  top: 30%;
+  left: 74%;
+  width: 6px;
+  height: 6px;
+  animation-delay: -4.2s;
+}
+
+@keyframes sc-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sc-blink {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+/* ESCRITORIO: se ancla al espacio libre a la derecha del titular */
+@media (min-width: 961px) {
+  .social-cluster {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 290px;
+    height: 320px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .sc-ig {
+    width: 49px;
+    height: 49px;
+    top: 12%;
+    left: 34%;
+  }
+
+  .sc-fb {
+    width: 47px;
+    height: 47px;
+    top: 22%;
+    left: 62%;
+  }
+
+  .sc-tt {
+    width: 42px;
+    height: 42px;
+    top: 34%;
+    left: 24%;
+  }
+
+  .sc-bubble {
+    font-size: 13px;
+    padding: 9px 14px;
+    border-radius: 16px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .sc-b1 {
+    top: 60%;
+    left: 58%;
+  }
+
+  .sc-typing {
+    top: 84%;
+    left: 40%;
+    padding: 12px 14px;
+  }
+
+  .sc-typing i {
+    width: 6px;
+    height: 6px;
+  }
+
+  .sc-dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .sc-d1 {
+    top: 12%;
+    left: 62%;
+  }
+
+  .sc-d2 {
+    top: 46%;
+    left: 46%;
+    width: 7px;
+    height: 7px;
+  }
+
+  .sc-d3 {
+    top: 74%;
+    left: 72%;
+  }
+
+  .sc-d4 {
+    top: 90%;
+    left: 24%;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-chip,
+  .sc-bubble,
+  .sc-typing i,
+  .sc-dot {
+    animation: none;
+  }
+}
+
 /* ---------- beneficios (bento) ---------- */
 
 .light-band {
@@ -830,6 +1103,13 @@ p {
 .includes-content h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 20px 0 14px;
+}
+
+.includes-image {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin: 50px 0 25px;
 }
 
 .includes-content > p {
